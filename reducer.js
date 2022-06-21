@@ -1,13 +1,17 @@
 const init = {
-    cars = ['BMW']
+    cars: ['BMW']
 }
 
 export default function reducer(state, action, args) {
+    console.log(action, args)
     switch (action) {
-        default: 
-            case 'CREATE'
-
-                break
+        case 'ADD':
+            const [newCar] = args
+            return {
+                ...state,
+                cars: [...state.cars, newCar]
+            }
+        default:
             return state 
     }
 }

@@ -1,4 +1,7 @@
-import html from "./core.js"
+import { attach } from "./store.js";
+import  App from "./component/App.js";
 
-const cars = ['BMW', 'Porsche', 'Mercedes']
+attach(App, document.getElementById('root'))
 
+
+ 
